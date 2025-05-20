@@ -26,6 +26,10 @@ harmonizeM.m - The function to translate the transmission matrix M informed by W
 
 inference.m - The function to estimate individual colonization probabilities using information from patient characteristics, culture test results, and transmission events identified using WGS data.
 
+## System requirements
+
+The code can be run on MATLAB 2021a or later versions. A C++ compiler needs to be installed on the same computer. The code has been tested on MATLAB 2021a. There is no required non-standard hardware. No installation of the code is needed.
+
 ## Run codes
 
 To run the code, first compile the C++ programs in MATLAB using "mex ABMsimulation_chain_p_beta.c" and "mex masterequation_p_beta.c"
@@ -33,3 +37,5 @@ To run the code, first compile the C++ programs in MATLAB using "mex ABMsimulati
 Run harmonizeM() to estimate colonization probabilities for patients on paths connecting genetically related patients.
 
 Run inference() to estimate colonization probabilities for all patients using information from multimodal observations.
+
+The expected run time depends on the computer's CPU speed. On a "normal" desktop computer, it will take within 3 hours. The progress of the code will be printed out when the function is running.
